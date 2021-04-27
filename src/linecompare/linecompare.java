@@ -23,10 +23,15 @@ public class linecompare {
 		{
 			System.out.println("Equality of 2 Length is preferable");
 		}	
-		else
+		else if(x > y)
 		{		
-			System.out.println("Equality of 2 Length is not preferable");
+			System.out.println("Length of 1st line is Greater then 2nd line");
 		}
+		else
+		{
+			System.out.println("Length of 2nd line is Greater then 1st line");
+		}
+		
 		int e = ((x*x)+(y*y));
 		
 		System.out.println("\nThe Length of a line is:" +squareRoot(e));

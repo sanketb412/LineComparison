@@ -16,7 +16,18 @@ public class linecompare {
 		int d = sc.nextInt();
 		System.out.println("\nA length as 2 Points are:(" +a +"," +b +")and(" +c +"," +d +")");
 		
-		int e = (((c-a)*(c-a))+((d-b)*(d-b)));
+		Integer x = c - a;
+		Integer y = d - b;
+		
+		if(x.equals(y))
+		{
+			System.out.println("Equality of 2 Length is preferable");
+		}	
+		else
+		{		
+			System.out.println("Equality of 2 Length is not preferable");
+		}
+		int e = ((x*x)+(y*y));
 		
 		System.out.println("\nThe Length of a line is:" +squareRoot(e));
 	}

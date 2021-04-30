@@ -1,9 +1,10 @@
 package linecompare;
 import java.util.*;
+
 public class linecompare {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static Double Compare()
+	{
 		System.out.println("Welcome to Line Comparison Computation");
 		Scanner sc = new Scanner (System.in);
 		System.out.println("\nEnter the first cordinates of x1");
@@ -21,31 +22,34 @@ public class linecompare {
 		
 		if(x.equals(y))
 		{
-			System.out.println("Equality of 2 Length is preferable");
+			System.out.println("\nEquality of 2 Length is preferable");
 		}	
 		else if(x > y)
 		{		
-			System.out.println("Length of 1st line is Greater then 2nd line");
+			System.out.println("\nLength of 1st line is Greater then 2nd line");
 		}
 		else
 		{
-			System.out.println("Length of 2nd line is Greater then 1st line");
+			System.out.println("\nLength of 2nd line is Greater then 1st line");
 		}
 		
-		int e = ((x*x)+(y*y));
-		
-		System.out.println("\nThe Length of a line is:" +squareRoot(e));
-	}
-	public static double squareRoot (int e) {
-		double f;
-		double sqrtroot=e/2;
+		Double e = (double) ((x*x)+(y*y));
+		Double t;
+		Double Sqrt = e/2;
 		do
 		{
-			f=sqrtroot;
-			sqrtroot=(f+(e/f))/2;
+		t = Sqrt;
+		Sqrt = (t + (e/t))/2;
 		}
-		while((f-sqrtroot)!=0);
-		return sqrtroot;
+		while ((t - Sqrt) != 0);
+		return Sqrt;
+		
 	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println("\nThe Length of a line is:" +Compare());
+	}
+
 }
 

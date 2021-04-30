@@ -7,16 +7,16 @@ public class linecompare {
 	{
 		System.out.println("Welcome to Line Comparison Computation");
 		Scanner sc = new Scanner (System.in);
-		System.out.println("\nEnter the first cordinates of x1");
+		System.out.println("\nEnter the first cordinates of x1:");
 		int a = sc.nextInt();
-		System.out.println("\nEnter the first cordinates of y1");
+		System.out.println("\nEnter the first cordinates of y1:");
 		int b = sc.nextInt();
-		System.out.println("\nEnter the first cordinates of x2");
+		System.out.println("\nEnter the first cordinates of x2:");
 		int c = sc.nextInt();
-		System.out.println("\nEnter the first cordinates of y2");
+		System.out.println("\nEnter the first cordinates of y2:");
 		int d = sc.nextInt();
-		System.out.println("\nA length as 2 Points are:(" +a +"," +b +")and(" +c +"," +d +")");
-		
+		System.out.println("\nThe Cordinates of 2 Points are: (" +a +"," +b +") and (" +c +"," +d +")");
+	
 		Integer x = c - a;
 		Integer y = d - b;
 		
@@ -38,10 +38,11 @@ public class linecompare {
 		Double Sqrt = e/2;
 		do
 		{
-		t = Sqrt;
-		Sqrt = (t + (e/t))/2;
+			t = Sqrt;
+			Sqrt = (t + (e/t))/2;
 		}
 		while ((t - Sqrt) != 0);
+		
 		return Sqrt;
 		
 	}
